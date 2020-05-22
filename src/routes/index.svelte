@@ -1,11 +1,11 @@
 <script type="text/javascript">
   import Seriously from '../components/homeComponents/Seriously.svelte';
   import Carousel from '../components/homeComponents/Carousel.svelte';
-  // import BgFx from '../components/homeComponents/BgFx.svelte';
-  // import HardWorking from '../components/homeComponents/HardWorking.svelte';
-  // import Idealistic from '../components/homeComponents/Idealistic.svelte';
-  // import News from '../components/homeComponents/News.svelte';
-  // import Ambitious from '../components/homeComponents/Ambitious.svelte';
+  import BgFx from '../components/homeComponents/BgFx.svelte';
+  import HardWorking from '../components/homeComponents/HardWorking.svelte';
+  import Idealistic from '../components/homeComponents/Idealistic.svelte';
+  import News from '../components/homeComponents/News.svelte';
+  import Ambitious from '../components/homeComponents/Ambitious.svelte';
 </script>
 
 <style>
@@ -47,17 +47,17 @@
   <div class="carousel">
     <Carousel/>
   </div>
-  <!-- <div class="isHardWorking">
+  <div class="isHardWorking">
     <HardWorking />
-  </div> -->
-  <!-- <BgFx /> -->
-  <!-- <div class="isIdealistic">
+  </div>
+  <BgFx />
+  <div class="isIdealistic">
     <Idealistic />
-  </div> -->
-  <!-- <div class="isNews">
+  </div>
+  <div class="isNews">
     <News />
-  </div> -->
-  <!-- <div class="isAmbitious">
+  </div>
+  <div class="isAmbitious">
     <Ambitious />
-  </div> -->
+  </div>
 </section>
