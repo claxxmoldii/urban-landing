@@ -54,7 +54,9 @@
     </div>
   </nav>
   <section>
+    {#if segment !== undefined}
     <header><NavSapper {segment}/></header>
+    {/if}
     <main>
         <slot></slot>
     </main>

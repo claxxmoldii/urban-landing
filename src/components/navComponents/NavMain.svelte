@@ -90,10 +90,6 @@
     color: #ff1d1d;/*site colo*/
   }
 
-  .selected {
-    font-weight: 500;
-  }
-
   [aria-current] {
     font-weight: 600;
   }
@@ -104,13 +100,13 @@
   <header class="isTitle">
     <div class="mainTitle ">
 
-      <a class:selected='{segment === undefined}' href='.'>urban <br/>landing</a>
-      <!-- <p><a class:selected='{segment === undefined}' href='.'>landing</a></p> -->
+      <a aria-current='{segment === undefined ? "page" : undefined}'
+        href='.'>urban <br/>landing</a>
     </div>
     <div class="subTitle">
       <div>
-      <a class:selected='{segment === undefined}' href='.'>architecture <br/>urbanism</a>
-      <!-- <p><a class:selected='{segment === undefined}' href='.'>urbanism</a></p> -->
+      <a aria-current='{segment === undefined ? "page" : undefined}'
+        href='.'>architecture <br/>urbanism</a>
       </div>
     </div>
   </header>

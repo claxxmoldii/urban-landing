@@ -1,28 +1,32 @@
+<script type="text/javascript">
+  import Seriously from '../components/homeComponents/Seriously.svelte';
+  import Carousel from '../components/homeComponents/Carousel.svelte';
+  // import BgFx from '../components/homeComponents/BgFx.svelte';
+  // import HardWorking from '../components/homeComponents/HardWorking.svelte';
+  // import Idealistic from '../components/homeComponents/Idealistic.svelte';
+  // import News from '../components/homeComponents/News.svelte';
+  // import Ambitious from '../components/homeComponents/Ambitious.svelte';
+</script>
+
 <style>
-  h1, figure, p {
-    text-align: center;
-    margin: 0 auto;
+  section {
+    font-family: 'Raleway', sans-serif;
+    display: grid;
   }
 
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
+  .carousel {
+    z-index: 50;
   }
 
-  figure {
-    margin: 0 0 1em 0;
+  .isBanner {
+    z-index: 100;
   }
 
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
+  .isHardWorking,
+  .isIdealistic,
+  .isAmbitious,
+  .isNews {
+    z-index: 200;
   }
 
   @media (min-width: 480px) {
@@ -33,14 +37,27 @@
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>urban landing</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-  <img alt='Success Gal' src='imagesNasties/successgal.jpg'>
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<section>
+  <div class="isBanner">
+    <Seriously />
+  </div>
+  <div class="carousel">
+    <Carousel/>
+  </div>
+  <!-- <div class="isHardWorking">
+    <HardWorking />
+  </div> -->
+  <!-- <BgFx /> -->
+  <!-- <div class="isIdealistic">
+    <Idealistic />
+  </div> -->
+  <!-- <div class="isNews">
+    <News />
+  </div> -->
+  <!-- <div class="isAmbitious">
+    <Ambitious />
+  </div> -->
+</section>
