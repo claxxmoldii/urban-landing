@@ -1,7 +1,7 @@
 <script>
   export let segment;
 
-  let current = segment;
+  // let current = segment;
 </script>
 
 <style>
@@ -93,6 +93,10 @@
   .selected {
     font-weight: 500;
   }
+
+  [aria-current] {
+    font-weight: 600;
+  }
 </style>
 
 <section>
@@ -111,21 +115,42 @@
     </div>
   </header>
   <nav>
-    <!-- <li><a class:selected='{segment === undefined}' href='.'>home</a></li> -->
-    <a  class="isLink" class:selected='{segment === "projects"}' href='projects'>
-      projects
+    <a  class="isLink"
+        aria-current='{segment === undefined ? "page" : undefined}'
+        href='.'>
+        home
     </a>
-    <a class="isLink" class:selected='{segment === "practice"}' href='practice'>
-      practice
+    <a  class="isLink"
+        aria-current='{segment === "projects" ? "page" : undefined}'
+        href='projects'>
+        projects
     </a>
-    <a class="isLink" class:selected='{segment === "about"}' href='about'>
-      about
+    <a  class="isLink"
+        aria-current='{segment === "practice" ? "page" : undefined}'
+        href='practice'>
+        practice
+    </a>
+    <a  class="isLink"
+        aria-current='{segment === "about" ? "page" : undefined}'
+        href='about'>
+        about
+    </a>
+    <a  class="isLink"
+        aria-current='{segment === "success" ? "page" : undefined}'
+        href='success'>
+        sapper
     </a>
 
     <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
          the blog data when we hover over the link or tap it on a touchscreen -->
-    <a class="isdaBlog" rel=prefetch class:selected='{segment === "blog"}' href='blog'>
-      what's up
+    <a  class="isdaBlog"
+        rel=prefetch
+        aria-current='{segment === "blog" ? "page" : undefined}'
+        href='blog'>
+        what's up
     </a>
+    <!-- <a class="isdaBlog" rel=prefetch class:selected='{segment === "blog"}' href='blog'>
+      what's up
+    </a> -->
   </nav>
 </section>
