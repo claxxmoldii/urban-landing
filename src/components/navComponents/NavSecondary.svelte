@@ -28,20 +28,23 @@
   .selected {
     border-bottom: solid 1px #ff1d1d;/*site colo*/
   }
+
+  [aria-current] {
+    font-weight: 600;
+  }
 </style>
 
+{#if segment }
 <nav>
-  <h2 class="title siteColor">projects</h2>
+  <h2 class="title siteColor">{segment}</h2>
   <a  class="isLink"
       aria-current='{segment === "projects" ? "page" : undefined}'
-      href='projects'>
-    projects
+      href='{segment}'>
+    {segment}
   </a>
 </nav>
-
-<!-- <nav>
-  <h2 class="title siteColor">projects</h2>
-  <a  class="isLink" class:selected='{segment === "all"}' href='all'>
+{/if}
+<!-- <a  class="isLink" class:selected='{segment === "all"}' href='all'>
     all
   </a>
   <a  class="isLink" class:selected='{segment === current}' href='selected'>
@@ -61,5 +64,4 @@
   </a>
   <a  class="isLink" class:selected='{segment === "butAlso"}' href='butAlso'>
     but also
-  </a>
-</nav> -->
+  </a> -->

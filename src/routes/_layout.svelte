@@ -1,5 +1,6 @@
 <script>
   import NavMain from '../components/navComponents/NavMain.svelte';
+  import NavSecondary from '../components/navComponents/NavSecondary.svelte';
   import NavSapper from '../components/navComponents/NavSapper.svelte';
   import Footer from '../components/Footer.svelte';
 
@@ -30,11 +31,15 @@
     grid-column: main-section;
     display: grid;
     grid-template-rows: [navigation] auto [main] auto [footer] auto;
+    position: relative;
   }
 
   section header {
     grid-row: navigation;
     display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
   }
 
   main {
@@ -55,7 +60,7 @@
   </nav>
   <section>
     {#if segment !== undefined}
-    <header><NavSapper {segment}/></header>
+    <header><NavSecondary {segment}/></header>
     {/if}
     <main>
         <slot></slot>
