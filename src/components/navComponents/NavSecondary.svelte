@@ -1,5 +1,8 @@
 <script>
   export let segment;
+
+  let projects;
+  let practice;
 </script>
 
 <style type="text/css">
@@ -35,7 +38,7 @@
   }
 </style>
 
-{#if segment }
+{#if segment}
 <nav>
   <h2 class="title siteColor">{segment}</h2>
   <a  class="isLink"
@@ -45,8 +48,8 @@
   </a>
   <a  class="isLink"
       aria-current='{segment === "projects" ? "page" : undefined}'
-      href='{segment}'>
-    {segment}
+      href='projects'>
+    projects
   </a>
   <a  class="isLink"
       aria-current='{segment === "housing" ? "page" : undefined}'
@@ -75,6 +78,13 @@
   </a>
 </nav>
 {/if}
+<!-- {#if segment === practice}
+  <a  class="isLink"
+      aria-current='{segment === "practice" ? "page" : undefined}'
+      href='practice'>
+      practice
+  </a>
+{/if} -->
 <!-- <a  class="isLink" class:selected='{segment === "all"}' href='all'>
     all
   </a>

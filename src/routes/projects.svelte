@@ -1,6 +1,6 @@
 <script type="text/javascript">
   import { fly } from 'svelte/transition';
-  // import NavProjects from '../components/navComponents/NavProjects.svelte';
+  import NavProjects from '../components/navComponents/NavProjects.svelte';
   import SelectedProjects from '../components/projectsComponents/SelectedProjects.svelte';
 
   const rabelaise = {
@@ -177,10 +177,10 @@
 </svelte:head>
 
 <section>
-<!--   <nav>
-    <NavProjects />
+  <nav>
+    <NavProjects segment={'projects'}/>
   </nav>
- -->  <main>
+  <main>
     <SelectedProjects {...rabelaise}/>
     <SelectedProjects {...marchandises}/>
     <SelectedProjects {...waterloo}/>

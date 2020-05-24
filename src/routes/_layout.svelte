@@ -59,10 +59,10 @@
     </div>
   </nav>
   <section>
-    {#if segment !== undefined}
-    <header><NavSecondary {segment}/></header>
+<!--     {#if segment !== undefined}
+      <header><NavSecondary {segment}/></header>
     {/if}
-    <main>
+ -->    <main>
         <slot></slot>
     </main>
     <footer>
