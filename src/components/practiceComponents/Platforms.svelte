@@ -1,13 +1,8 @@
 <script>
-  import NavPractice from '../components/navComponents/NavPractice.svelte';
+  // import NavPractice from '../components/navComponents/NavPractice.svelte';
   import Design from '../components/practiceComponents/Design.svelte';
   import Planning from '../components/practiceComponents/Planning.svelte';
   import FauxArrow from '../components/practiceComponents/FauxArrow.svelte';
-
-  // import Platforms from '../components/practiceComponents/Platforms.svelte';
-  // import Values from '../components/valuesComponents/Values.svelte';
-
-  let showDis = true;
 </script>
 
 <style type="text/css">
@@ -51,20 +46,22 @@
 
 
 <svelte:head>
-  <title>Practice</title>
+  <title>Practice/Platform</title>
 </svelte:head>
 
-<!-- <section>
-  <nav>
-    <NavPractice segment={'practice'}/>
-  </nav>
-  {#if showDis}
-    <Platforms />
-  {/if}
-  <footer></footer>
-</section> -->
+<main>
+  <div class="isDesign">
+    <Design />
+  </div>
+  <div class="isPlanning">
+    <Planning />
+  </div>
+  <div class="divider">
+    <FauxArrow />
+  </div>
+</main>
 
-<section>
+<!-- <section>
   <nav>
     <NavPractice segment={'practice'}/>
   </nav>
@@ -80,4 +77,4 @@
     </div>
   </main>
   <footer></footer>
-</section>
+</section> -->

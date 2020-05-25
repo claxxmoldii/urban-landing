@@ -18,8 +18,8 @@
     border-bottom: solid 1px #ff1d1d;/*site colo*/
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: rotate(45deg) translateX(95px);
+    right: 50%;
+    transform: rotate(45deg) translateX(118px);
   }
 </style>
 
