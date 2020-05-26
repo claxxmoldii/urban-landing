@@ -10,6 +10,11 @@
 	<link rel='stylesheet' href='global.css'>
 	<link rel='manifest' href='manifest.json' crossorigin='use-credentials'>
 	<link rel='icon' type='image/png' href='favicon.png'>
+  <link href="https://fonts.googleapis.com/css?family=
+    Raleway:100,200,300,400,500,600,700,800|
+    Open+Sans:300,400,600,700|
+    Open+Sans+Condensed:300,700
+    &display=swap&effect=outline" rel="stylesheet">
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
@@ -29,5 +34,9 @@
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
 	%sapper.scripts%
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Q0YlpqyE1q2XOTn7bkCmzBK0DtdcUPc&callback=initMap">
+  </script>
 </body>
 </html>
