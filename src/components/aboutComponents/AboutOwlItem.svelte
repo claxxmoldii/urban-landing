@@ -7,14 +7,6 @@
 </script>
 
 <style type="text/css">
-  .owl-carousel {
-    max-width: 100%;
-  }
-
-  .isRelative {
-    position: relative;
-  }
-
   .owl-item {
     width: 70px;
     margin: 0;
@@ -49,34 +41,6 @@
 
   h5:nth-of-type(2n) {
     color: #ff1d1d;
-  }
-
-  .naviBox {
-    width: 90%;
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    /*background-color: lightcyan;*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .owl-nav span {
-    font-size: 1.5rem;
-    color: #ff1d1d;
-    background-color: #fff;
-    border-radius: 50%;
-    padding: 0 7px;
-  }
-
-  .owl-nav span:hover {
-    color: #fff;
-    background-color: #ff1d1d;
-  }
-
-  .arrow-left {
-    transform: rotate(180deg);
   }
 
   a {

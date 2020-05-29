@@ -102,6 +102,7 @@ const posts = [
       <p>thrown for a loop/freecodecamp</p>
       <p>git help/ohshitgit!</p>
       <p>owl carousel!</p>
+      <p>google maps!</p>
       <p>svelte-scrollto-npm</p>
     `
   }
