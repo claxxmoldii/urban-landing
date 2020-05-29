@@ -6,12 +6,12 @@
   let container;
   let map;
   let zoom = 16;
-  let cainta = {lat: 14.616807, lng: 121.101018};
-  let center = cainta;
-  let current = 'cainta';
+  let maliestraat = {lat: 50.822152, lng: 4.360047};
+  let center = maliestraat;
+  let current = 'maliestraat';
 
-  const caintaMarker = new google.maps.Marker({
-    position: cainta,
+  const maliestraatMarker = new google.maps.Marker({
+    position: maliestraat,
     map: map
   });
 
@@ -20,7 +20,7 @@
       zoom,
       center
     });
-    caintaMarker.setMap(map);
+    maliestraatMarker.setMap(map);
   });
 
 </script>
