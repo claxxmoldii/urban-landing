@@ -1,9 +1,32 @@
 <script type="text/javascript">
+  import * as animateScroll from "svelte-scrollto";
+
   import NavAbout from '../components/navComponents/NavAbout.svelte';
   import AboutPartners from '../components/aboutComponents/AboutPartners.svelte';
   import AboutTeam from '../components/aboutComponents/AboutTeam.svelte';
   import AboutCareers from '../components/aboutComponents/AboutCareers.svelte';
   import AboutContact from '../components/aboutComponents/AboutContact.svelte';
+
+  function gotoContact() {
+    animateScroll.scrollTo({element: '#contact', offset: -150, duration: 1500});
+  }
+
+  function gotoCareers() {
+    animateScroll.scrollTo({element: '#careers', offset: -150, duration: 1000});
+  }
+
+  function gotoTeam() {
+    animateScroll.scrollTo({element: '#team', offset: -150, duration: 500});
+  }
+
+  function gotoPartners() {
+    animateScroll.scrollTo({element: '#partners', offset: -150, duration: 1000});
+  }
+
+  function yeah() {
+    alert('yeah! yeah!');
+  }
+
 </script>
 
 <style type="text/css">
@@ -25,6 +48,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: [partners] auto [team] auto [careers] auto [contact] auto;
+
+    scroll-behavior: smooth;
   }
 
   .aboutPartners {
@@ -50,7 +75,12 @@
 
 <section>
   <nav>
-    <NavAbout segment={'about'} />
+    <NavAbout segment={'about'}
+              on:scrollToContact={gotoContact}
+              on:scrollToCareers={gotoCareers}
+              on:scrollToTeam={gotoTeam}
+              on:scrollToPartners={gotoPartners}
+    />
   </nav>
   <main>
     <div id="partners" class="aboutPartners">

@@ -1,4 +1,24 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
+  function gotoContact() {
+    dispatch('scrollToContact');
+  }
+
+  function gotoCareers() {
+    dispatch('scrollToCareers');
+  }
+
+  function gotoTeam() {
+    dispatch('scrollToTeam');
+  }
+
+  function gotoPartners() {
+    dispatch('scrollToPartners');
+  }
+
   export let segment;
 </script>
 
@@ -34,9 +54,9 @@
 {#if segment}
 <nav>
   <h2 class="title siteColor">about</h2>
-  <a  aria-current='{segment === "about" ? "page" : undefined}' href='about'>partners</a>
-  <a  aria-current='{segment === "team" ? "page" : undefined}' href='team'>team</a>
-  <a  aria-current='{segment === "careers" ? "page" : undefined}' href='careers'>careers</a>
-  <a  aria-current='{segment === "contact" ? "page" : undefined}' href='contact'>contact</a>
+  <a  on:click={gotoPartners} aria-current='{segment === "about" ? "page" : undefined}'>partners</a>
+  <a  on:click={gotoTeam} aria-current='{segment === "team" ? "page" : undefined}'>team</a>
+  <a  on:click={gotoCareers} aria-current='{segment === "careers" ? "page" : undefined}'>careers</a>
+  <a  on:click={gotoContact} aria-current='{segment === "contact" ? "page" : undefined}'>contact</a>
 </nav>
 {/if}
