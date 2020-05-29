@@ -82,7 +82,29 @@ const posts = [
 		html: `
 			<p>We're so glad you asked! Come on over to the <a href='https://github.com/sveltejs/svelte'>Svelte</a> and <a href='https://github.com/sveltejs/sapper'>Sapper</a> repos, and join us in the <a href='https://svelte.dev/chat'>Discord chatroom</a>. Everyone is welcome, especially you!</p>
 		`
-	}
+	},
+
+  {
+    title: 'attributions...',
+    slug: "attributions",
+    html: `
+      <p>css-sy stuff/css tricks</p>
+      <p>layout lab/jen simmons</p>
+      <p>grid by example/rachel andrew</p>
+      <p>using cssgrid the right way/hey it's violet!</p>
+      <p>svelte swipe/sharifclick</p>
+      <p>awwwards</p>
+      <p>googlefonts</p>
+      <p>inspired by/urban platform</p>
+      <p>icons/linearicons</p>
+      <p>icons/fontawesome</p>
+      <p>vanilla js/gomakethings</p>
+      <p>thrown for a loop/freecodecamp</p>
+      <p>git help/ohshitgit!</p>
+      <p>owl carousel!</p>
+      <p>svelte-scrollto-npm</p>
+    `
+  }
 ];
 
 posts.forEach(post => {
