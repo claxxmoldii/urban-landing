@@ -5,18 +5,22 @@
 
   function gotoContact() {
     dispatch('scrollToContact');
+    return segment = 'contact';
   }
 
   function gotoCareers() {
     dispatch('scrollToCareers');
+    return segment = 'careers';
   }
 
   function gotoTeam() {
     dispatch('scrollToTeam');
+    return segment = 'team';
   }
 
   function gotoPartners() {
     dispatch('scrollToPartners');
+    return segment = 'about';
   }
 
   export let segment;
